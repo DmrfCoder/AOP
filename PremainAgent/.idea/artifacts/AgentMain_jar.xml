@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AgentMain:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AgentMain_jar</output-path>
+    <root id="archive" name="AgentMain.jar">
+      <element id="module-output" name="AgentMain" />
+    </root>
+  </artifact>
+</component>

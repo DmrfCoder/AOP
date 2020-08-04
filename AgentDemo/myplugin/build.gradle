@@ -1,0 +1,27 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+group = 'com.bytedance.ug.myplugin'
+version = '1.0.0'
+
+dependencies {
+    compile files('/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/tools.jar')
+    //compile 'org.codehaus.groovy:groovy-all:2.4.14'
+
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('/Users/dmrfcoder/AndroidStudioProjects/AgentDemo/localMaven'))
+        }
+    }
+}
